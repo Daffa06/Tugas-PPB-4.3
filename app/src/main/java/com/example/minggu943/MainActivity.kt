@@ -31,15 +31,15 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_item1 -> {
-                tvSelectedOption.text = "Selected Option: Option 1"
+                tvSelectedOption.text = "Opsi pilihan 1"
                 return true
             }
             R.id.menu_item2 -> {
-                tvSelectedOption.text = "Selected Option: Option 2"
+                tvSelectedOption.text = "Opsi pilihan 2"
                 return true
             }
             R.id.menu_item3 -> {
-                tvSelectedOption.text = "Selected Option: Option 3"
+                tvSelectedOption.text = "Opsi pilihan 3"
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         builder.setTitle("Select an option")
 
         builder.setItems(pickerOptions) { _, which ->
-            tvSelectedOption.text = "Selected Option: ${pickerOptions[which]}"
+            tvSelectedOption.text = "Opsi: ${pickerOptions[which]}"
         }
 
         builder.create().show()
